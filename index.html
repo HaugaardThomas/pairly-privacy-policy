@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Pairly</title>
+<meta name="description" content="How Pairly collects, uses, and protects your information.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:        #1d1b2e;
+    --ink-soft:   #5d596f;
+    --paper:      #fbfaff;
+    --surface:    #f1eef9;
+    --line:       #e3def0;
+    --violet:     #5a4b9c;   /* primary of the pair */
+    --coral:      #e8845e;   /* the other half of the pair */
+    --violet-dim: #efeaff;
+    --maxw:       46rem;
+
+    --display: "Bricolage Grotesque", system-ui, sans-serif;
+    --body:    "Newsreader", Georgia, serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.075rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
+
+  /* ---------- Header ---------- */
+  header.masthead {
+    background:
+      radial-gradient(120% 140% at 100% 0%, var(--violet-dim) 0%, transparent 55%),
+      var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 3.5rem 0 2.75rem;
+  }
+
+  .brand { display: flex; align-items: center; gap: 0.7rem; }
+
+  .mark { width: 34px; height: 34px; flex: none; display: block; }
+  .mark circle { fill: none; stroke-width: 6; }
+  .mark .c1 { stroke: var(--violet); }
+  .mark .c2 { stroke: var(--coral); }
+
+  .wordmark {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.45rem;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .wordmark span { color: var(--coral); }
+
+  h1 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(2.1rem, 6vw, 3.1rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin: 2rem 0 0.9rem;
+  }
+
+  .lede {
+    color: var(--ink-soft);
+    font-size: 1.15rem;
+    max-width: 38rem;
+    margin: 0 0 1.5rem;
+  }
+
+  .updated {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--display);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--violet);
+    background: var(--violet-dim);
+    border-radius: 999px;
+    padding: 0.4rem 0.9rem;
+  }
+  .updated::before {
+    content: "";
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--coral);
+  }
+
+  /* ---------- Contents ---------- */
+  nav.toc {
+    margin: 2.5rem 0 0;
+    padding: 1.5rem 1.6rem;
+    background: var(--surface);
+    border-radius: 14px;
+  }
+  nav.toc h2 {
+    font-family: var(--display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+    margin: 0 0 1rem;
+  }
+  nav.toc ol {
+    list-style: none;
+    margin: 0; padding: 0;
+    columns: 2;
+    column-gap: 2rem;
+  }
+  nav.toc li {
+    counter-increment: toc;
+    margin: 0 0 0.55rem;
+    break-inside: avoid;
+  }
+  nav.toc a {
+    font-family: var(--display);
+    font-size: 0.95rem;
+    color: var(--ink);
+    text-decoration: none;
+    display: flex;
+    gap: 0.6rem;
+    align-items: baseline;
+  }
+  nav.toc a::before {
+    content: counter(toc, decimal-leading-zero);
+    color: var(--violet);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.8rem;
+  }
+  nav.toc a:hover { color: var(--violet); }
+  nav.toc ol { counter-reset: toc; }
+
+  /* ---------- Sections ---------- */
+  main { padding: 1rem 0 3rem; counter-reset: sec; }
+
+  section {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  section:last-of-type { border-bottom: none; }
+
+  section h2 {
+    counter-increment: sec;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    display: flex;
+    gap: 0.85rem;
+    align-items: baseline;
+  }
+  section h2::before {
+    content: counter(sec, decimal-leading-zero);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--coral);
+    font-variant-numeric: tabular-nums;
+    border: 1.5px solid var(--line);
+    border-radius: 8px;
+    padding: 0.15rem 0.5rem;
+    flex: none;
+    align-self: flex-start;
+    margin-top: 0.25rem;
+  }
+
+  h3 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.02rem;
+    color: var(--violet);
+    margin: 1.6rem 0 0.4rem;
+  }
+
+  p { margin: 0 0 1rem; }
+  section > p:last-child { margin-bottom: 0; }
+
+  ul { margin: 0 0 1rem; padding-left: 0; list-style: none; }
+  ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin: 0 0 0.55rem;
+  }
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0.72em;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    border: 2px solid var(--coral);
+  }
+
+  strong { font-weight: 600; color: var(--ink); }
+
+  .ph {
+    background: var(--violet-dim);
+    color: var(--violet);
+    font-family: var(--display);
+    font-size: 0.88em;
+    font-weight: 600;
+    padding: 0.05em 0.4em;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+
+  /* ---------- Contact card ---------- */
+  .contact-card {
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 16px;
+    padding: 1.75rem 1.9rem;
+    margin-top: 0.5rem;
+  }
+  .contact-card .label {
+    font-family: var(--display);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--coral);
+    margin: 0 0 0.35rem;
+  }
+  .contact-card a {
+    font-family: var(--display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--paper);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    word-break: break-all;
+  }
+  .contact-card a:hover { text-decoration: underline; text-decoration-color: var(--coral); }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 2rem 0 3rem;
+  }
+  .footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  footer small {
+    color: var(--ink-soft);
+    font-family: var(--display);
+    font-size: 0.85rem;
+  }
+  .back-top {
+    font-family: var(--display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--violet);
+    text-decoration: none;
+  }
+  .back-top:hover { color: var(--coral); }
+
+  /* ---------- Focus / a11y ---------- */
+  a:focus-visible {
+    outline: 2.5px solid var(--violet);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  /* ---------- Entrance ---------- */
+  .reveal { opacity: 0; transform: translateY(12px); animation: rise 0.6s ease forwards; }
+  .reveal:nth-child(2) { animation-delay: 0.06s; }
+  .reveal:nth-child(3) { animation-delay: 0.12s; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+
+  @media (max-width: 540px) {
+    nav.toc ol { columns: 1; }
+    body { font-size: 1.02rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { animation: none; opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="brand reveal">
+      <svg class="mark" viewBox="0 0 60 40" aria-hidden="true">
+        <circle class="c1" cx="22" cy="20" r="15"/>
+        <circle class="c2" cx="38" cy="20" r="15"/>
+      </svg>
+      <span class="wordmark">Pair<span>ly</span></span>
+    </div>
+
+    <h1 class="reveal">Privacy Policy</h1>
+    <p class="lede reveal">How Pairly collects, uses, and protects your information — written to be read, not just agreed to.</p>
+    <span class="updated">Last updated <span class="ph">[DATE]</span></span>
+
+    <nav class="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#information">Information we collect</a></li>
+        <li><a href="#use">How we use it</a></li>
+        <li><a href="#share">How we share it</a></li>
+        <li><a href="#retention">Data retention</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#children">Children's privacy</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#transfers">International transfers</a></li>
+        <li><a href="#contact">Contact us</a></li>
+        <li><a href="#changes">Changes</a></li>
+      </ol>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p style="margin-top:2.25rem; color:var(--ink-soft);">This Privacy Policy describes how Pairly (“we,” “us,” or “our”) collects, uses, and shares information when you use our mobile application (“the App”). By using Pairly, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
+
+  <section id="information">
+    <h2>Information We Collect</h2>
+    <h3>Information you provide</h3>
+    <ul>
+      <li>Account information such as your name, email address, and password when you register.</li>
+      <li>Profile details you choose to add.</li>
+      <li>Content you create, upload, or share within the App.</li>
+      <li>Communications you send to us, such as support requests.</li>
+    </ul>
+    <h3>Information collected automatically</h3>
+    <ul>
+      <li>Device information (device model, operating system, unique device identifiers).</li>
+      <li>Usage data (features used, time spent, in-app actions).</li>
+      <li>Log data and crash reports.</li>
+      <li>Approximate or precise location, only if you grant permission. <span class="ph">Remove if not applicable.</span></li>
+    </ul>
+    <h3>Information from third parties</h3>
+    <ul>
+      <li>If you sign in using a third-party service such as Google or Apple, we may receive basic profile information from that service. <span class="ph">Remove if not applicable.</span></li>
+    </ul>
+  </section>
+
+  <section id="use">
+    <h2>How We Use Your Information</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Provide, operate, and maintain the App.</li>
+      <li>Create and manage your account.</li>
+      <li>Improve, personalize, and develop new features.</li>
+      <li>Communicate with you, including updates and support responses.</li>
+      <li>Monitor usage and detect, prevent, and address technical issues or abuse.</li>
+      <li>Comply with legal obligations.</li>
+    </ul>
+  </section>
+
+  <section id="share">
+    <h2>How We Share Your Information</h2>
+    <p>We do not sell your personal information. We may share information in the following circumstances:</p>
+    <ul>
+      <li><strong>Service providers:</strong> with third parties that help us operate the App (hosting, analytics, crash reporting), bound by confidentiality obligations.</li>
+      <li><strong>Legal requirements:</strong> when required by law, regulation, legal process, or governmental request.</li>
+      <li><strong>Business transfers:</strong> in connection with a merger, acquisition, or sale of assets.</li>
+      <li><strong>With your consent:</strong> when you direct us to share information.</li>
+    </ul>
+  </section>
+
+  <section id="retention">
+    <h2>Data Retention</h2>
+    <p>We retain your information for as long as your account is active or as needed to provide the App. You may request deletion of your account and associated data at any time by contacting us.</p>
+  </section>
+
+  <section id="security">
+    <h2>Security</h2>
+    <p>We use reasonable administrative, technical, and physical safeguards to protect your information. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
+  </section>
+
+  <section id="children">
+    <h2>Children's Privacy</h2>
+    <p>Pairly is not intended for children under <span class="ph">[13 / 16]</span>. We do not knowingly collect personal information from children under that age. If you believe a child has provided us with personal information, please contact us so we can delete it.</p>
+  </section>
+
+  <section id="rights">
+    <h2>Your Rights and Choices</h2>
+    <p>Depending on your location, you may have the right to:</p>
+    <ul>
+      <li>Access, correct, or delete your personal information.</li>
+      <li>Object to or restrict certain processing.</li>
+      <li>Withdraw consent at any time.</li>
+      <li>Request a copy of your data (data portability).</li>
+    </ul>
+    <p>To exercise these rights, contact us using the details below. You can also control certain data through your device settings, such as location permissions and notification preferences.</p>
+  </section>
+
+  <section id="transfers">
+    <h2>International Data Transfers</h2>
+    <p>Your information may be transferred to and processed in countries other than your own. Where required, we take steps to ensure appropriate safeguards are in place. <span class="ph">Adjust based on where your servers and providers are located.</span></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or our data practices, you can reach us at:</p>
+    <div class="contact-card">
+      <p class="label">Email</p>
+      <a href="mailto:thomashaugaard11@gmail.com">thomashaugaard11@gmail.com</a>
+    </div>
+  </section>
+
+  <section id="changes">
+    <h2>Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy in the App and updating the “Last updated” date above. We encourage you to review this policy periodically.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <small>© <span id="year">2026</span> Pairly. All rights reserved.</small>
+    <a class="back-top" href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
